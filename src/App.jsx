@@ -11,20 +11,20 @@ function App() {
     name: 'Morty Smith',
     image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
   }
- const item3 = {
-  name:"Summer Smith",
-  image:'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
- }
- 
- //Listas (Arrays)
- const itens = [item1, item2, item3]
+
+  const item3 = {
+    name: 'Summer Smith',
+    image: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
+  }
+
+  // Listas (Arrays)
+  const itens = [item1, item2, item3]
+
   return (
     <>
       <div className="cards">
-       {/*Para cada um dos itens da lista, exibir um Card */}
-       {itens.map(function (elemento) {
-        return <Card item={elemento} />
-       })}
+        {/* Para cada um dos itens da lista, exibir um Card */}
+        {itens.map(elemento => <Card item={elemento} key={elemento.name} />)}
       </div>
     </>
   )
